@@ -1,0 +1,20 @@
+[
+  {"question": "How long does standard delivery take?", "expected_doc": "shipping", "expected_heading": "Delivery times"},
+  {"question": "How much does express shipping cost?", "expected_doc": "shipping", "expected_heading": "Delivery times"},
+  {"question": "Who pays customs duties on international orders?", "expected_doc": "shipping", "expected_heading": "International shipping"},
+  {"question": "When will my tracking link arrive?", "expected_doc": "shipping", "expected_heading": "Tracking"},
+  {"question": "How many days do I have to return an item?", "expected_doc": "returns", "expected_heading": "Return window"},
+  {"question": "Can I return a final sale item?", "expected_doc": "returns", "expected_heading": "Return window"},
+  {"question": "How long until I get my refund?", "expected_doc": "returns", "expected_heading": "Refunds"},
+  {"question": "Are shipping fees refunded?", "expected_doc": "returns", "expected_heading": "Refunds"},
+  {"question": "How do I exchange for a different size?", "expected_doc": "returns", "expected_heading": "Exchanges"},
+  {"question": "Is a broken zip on my backpack covered by warranty?", "expected_doc": "warranty", "expected_heading": "What is covered"},
+  {"question": "How do I make a warranty claim?", "expected_doc": "warranty", "expected_heading": "Making a claim"},
+  {"question": "Does the warranty cover accidental damage?", "expected_doc": "warranty", "expected_heading": "not covered"},
+  {"question": "I forgot my password, how do I reset it?", "expected_doc": "account", "expected_heading": "password"},
+  {"question": "How do I turn on two-factor authentication?", "expected_doc": "account", "expected_heading": "Two-factor"},
+  {"question": "How do I delete my account?", "expected_doc": "account", "expected_heading": "Deleting"},
+  {"question": "What is the capital of France?", "expected_doc": null},
+  {"question": "Can you recommend a good pizza recipe?", "expected_doc": null},
+  {"question": "Who won the football world cup in 2018?", "expected_doc": null}
+]
