@@ -85,10 +85,11 @@ With Postgres + pgvector (HNSW index for vectors, a generated `tsvector` column 
 
 ```bash
 docker compose up -d
-DATABASE_URL=postgresql://rag:rag@localhost:5432/rag uvicorn api.main:app
+cp .env.example .env      # DATABASE_URL already points at the compose database
+uvicorn api.main:app --env-file .env
 ```
 
-Set `OPENAI_API_KEY` to use `text-embedding-3-small` instead of the offline embedder.
+Set `OPENAI_API_KEY` in `.env` to use `text-embedding-3-small` instead of the offline embedder. All settings are listed in [.env.example](.env.example); `.env` is git-ignored.
 
 ### Endpoints
 
