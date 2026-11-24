@@ -1,5 +1,7 @@
 # rag-hybrid-search
 
+[![CI](https://github.com/prakash6018/rag-hybrid-search/actions/workflows/ci.yml/badge.svg)](https://github.com/prakash6018/rag-hybrid-search/actions/workflows/ci.yml)
+
 Hybrid retrieval for RAG (vector + keyword search, fused) with the part most demos skip: **knowing when not to answer**, and **measuring retrieval quality** with golden questions.
 
 ```text
