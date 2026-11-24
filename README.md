@@ -21,20 +21,20 @@ A RAG system that always returns *something* will confidently answer questions i
 
 ```mermaid
 flowchart LR
-    D[Markdown docs] --> C[Structure-aware chunking<br/>heading path kept on each chunk]
-    C --> E[Embeddings]
-    C --> K[Keyword index<br/>BM25 / Postgres FTS]
-    E --> V[(Vectors<br/>in memory / pgvector HNSW)]
-    Q[Question] --> VS[Vector search]
-    Q --> KS[Keyword search]
+    D["Markdown docs"] --> C["Structure-aware chunking<br/>heading path kept on each chunk"]
+    C --> E["Embeddings"]
+    C --> K["Keyword index<br/>BM25 / Postgres FTS"]
+    E --> V[("Vectors<br/>in memory / pgvector HNSW")]
+    Q["Question"] --> VS["Vector search"]
+    Q --> KS["Keyword search"]
     V --> VS
     K --> KS
-    VS --> G{similarity >= min_score?}
-    G -- no --> NF[found = false<br/>&quot;I don't know&quot;]
-    G -- yes --> F[Fusion<br/>RRF or weighted]
+    VS --> G{"similarity >= min_score?"}
+    G -- no --> NF["found = false<br/>#quot;I don't know#quot;"]
+    G -- yes --> F["Fusion<br/>RRF or weighted"]
     KS --> F
-    F --> B[top_k + context budget]
-    B --> P[Passages with source<br/>ready for the LLM prompt]
+    F --> B["top_k + context budget"]
+    B --> P["Passages with source<br/>ready for the LLM prompt"]
 ```
 
 - **Chunking** keeps each passage under its headings (`Returns > Refunds: ...`), so it still makes sense when retrieved alone. Long sections split with overlap. Unchanged documents are skipped by content hash.
