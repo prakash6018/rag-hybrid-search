@@ -1,0 +1,10 @@
+# Core library (ragkit) has no dependencies. These are for the API and Postgres store.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+psycopg[binary]>=3.2
+pgvector>=0.3
+numpy>=1.26
+# Optional: real embeddings
+openai>=1.40
+# Dev
+pytest>=8
